@@ -138,6 +138,11 @@ config ARM_BOOT_HOOK_BOOT0
 	select ENABLE_ARM_SOC_BOOT0_HOOK
 	default y if MACH_SUN50I
 
+config ARM_BOOT_HOOK_RMR
+	bool
+	depends on ARM64
+	select ENABLE_ARM_SOC_BOOT0_HOOK
+
 config DRAM_TYPE
 	int "sunxi dram type"
 	depends on MACH_SUN8I_A83T
