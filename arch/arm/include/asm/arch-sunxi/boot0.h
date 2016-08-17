@@ -4,11 +4,11 @@
  * SPDX-License-Identifier:	GPL-2.0+
  */
 
-#if defined(CONFIG_ARM_BOOT_HOOK_BOOT0)
+#if defined(CONFIG_ARM_BOOT_HOOK_BOOT0) && !defined(CONFIG_SPL_BUILD)
 /* reserve space for BOOT0 header information */
 	b	reset
 	.space	1532
-#elif defined(CONFIG_ARM_BOOT_HOOK_RMR)
+#elif defined(CONFIG_ARM_BOOT_HOOK_RMR) && defined(CONFIG_SPL_BUILD)
 	tst     x0, x0                  // this is "b #0x84" in ARM
 	b       reset
 	.space  0x7c

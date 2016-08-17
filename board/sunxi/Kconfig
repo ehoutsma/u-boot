@@ -125,6 +125,7 @@ config MACH_SUN50I
 	bool "sun50i (Allwinner A64)"
 	select ARM64
 	select SUNXI_GEN_SUN6I
+	select SUPPORT_SPL
 
 endchoice
 
@@ -142,6 +143,7 @@ config ARM_BOOT_HOOK_RMR
 	bool
 	depends on ARM64
 	select ENABLE_ARM_SOC_BOOT0_HOOK
+	default y if MACH_SUN50I
 
 config DRAM_TYPE
 	int "sunxi dram type"

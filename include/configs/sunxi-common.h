@@ -182,7 +182,9 @@
 
 #define CONFIG_SPL_FRAMEWORK
 
+#ifndef CONFIG_MACH_SUN50I
 #define CONFIG_SPL_BOARD_LOAD_IMAGE
+#endif
 
 #if defined(CONFIG_MACH_SUN9I)
 #define CONFIG_SPL_TEXT_BASE		0x10040		/* sram start+header */
