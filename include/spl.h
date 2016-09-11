@@ -22,11 +22,12 @@
 
 struct spl_image_info {
 	const char *name;
-	u8 os;
 	ulong load_addr;
 	ulong entry_point;
 	u32 size;
 	u32 flags;
+	u8 os;
+	u8 arch;
 };
 
 /*
