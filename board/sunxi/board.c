@@ -730,7 +730,7 @@ int ft_board_setup(void *blob, bd_t *bd)
 #ifdef CONFIG_SPL_LOAD_FIT
 int board_fit_config_name_match(const char *name)
 {
-#ifdef CONFIG_MACH_SUN50I
+#ifdef CONFIG_MACH_SUN50I_H5
 	return strcmp(name, "Orangepi PC2");
 #endif
 	return -1;
