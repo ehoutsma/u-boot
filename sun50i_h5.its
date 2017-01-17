@@ -32,6 +32,8 @@
 	};
 	configurations {
 		default = "config@1";
+
+		config@1 {
                         description = "Orangepi PC2";
                         loadables = "atf@1", "uboot@1";
                         fdt = "fdt@1";
